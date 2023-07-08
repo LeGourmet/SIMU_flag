@@ -4,10 +4,10 @@ public class Flag{
   public int sizeY;
   public float mass;
   
-  // ---------------------------------------------------- CONSTRUCTOR ----------------------------------------------------
   public Point[][] points;
   public ArrayList<Spring> springs;
   
+  // ---------------------------------------------------- CONSTRUCTOR ----------------------------------------------------
   public Flag(int sizeX, int sizeY, float mass){
     this.sizeX = sizeX;
     this.sizeY = sizeY;
@@ -18,10 +18,10 @@ public class Flag{
   
   // ----------------------------------------------------- FONCTIONS -----------------------------------------------------
   public void reset(){
-    this.points = new Point[sizeX][sizeY];
-    this.springs = new ArrayList<>();
+    points = new Point[sizeX][sizeY];
+    springs = new ArrayList<>();
     
-    final float massPoints = mass/float(sizeX*sizeY);
+    float massPoints = mass/float(sizeX*sizeY);
     PImage img = loadImage(FLAG_TEXTURE);
     img.resize(sizeX,sizeY);
     

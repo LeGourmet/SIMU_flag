@@ -27,7 +27,7 @@ public class Point{
   public void move(PVector vec){ if(!blocked) pos.add(vec); }
   
   public void update(float dt){
-    if(this.blocked) return;
+    if(blocked) return;
     
     PVector a = new PVector(0.,0.,0.).add(PVector.div(forces,mass));
     PVector vel = getVelocity(dt).add(PVector.mult(a,dt));
@@ -36,6 +36,6 @@ public class Point{
     pos_old.set(pos);
     pos.set(pos_next);
     
-    this.forces.set(0.,0.,0.);
+    forces.set(0.,0.,0.);
   }
 }
